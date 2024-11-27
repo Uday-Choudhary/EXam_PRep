@@ -17,6 +17,7 @@
             align-items: center;
             padding: 10px 20px;
             color: white;
+            z-index: 1;
         }
         .logo {
             font-size: 24px;
@@ -43,6 +44,29 @@
             height: 40px;
             object-fit: cover;
         }
+        #video1 {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            font-size: 130px;
+            -webkit-text-stroke: 1px #fff;
+            color: transparent;
+            background-image: linear-gradient(#fff ,#fff);
+            background-repeat: no-repeat;
+            -webkit-background-clip: text;
+            background-position: -750px 0;
+            animation: backcolor 5s linear infinite alternate; 
+        }
+        @keyframes backcolor { 100% { background-position: 750px 0; } }
     </style>
 </head>
 <body>
@@ -58,6 +82,11 @@
             <a href="#">Contact</a>
         </div>
     </nav>
+    <video autoplay muted loop id="video1">
+        <source src="27725-365890983.mp4" type="video/mp4">
+    </video>
    </header>
+   <h1 class="title">Hola Future Engineers</h1>
+   <!-- <h1 class="title">Engineers</h1> -->
 </body>
 </html>
